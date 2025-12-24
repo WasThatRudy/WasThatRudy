@@ -57,3 +57,10 @@ I enjoy building clean, scalable user interfaces, working on real-world products
 ## 🪪 Open Source Participation
 
 [![Hacktoberfest Holopin badges](https://holopin.me/rudrakshass)](https://holopin.io/@rudrakshass)
+
+---
+
+## 📊 GitHub Stats
+
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=WasThatRudy&show_icons=true&theme=default)
+
