@@ -51,7 +51,6 @@ I enjoy building clean, scalable user interfaces, working on real-world products
 ## 📫 Contact
 
 - Email: rudraksharss@gmail.com  
-- GitHub: @rudrakshass  
 - LinkedIn: https://linkedin.com/in/rudrakshasingh18
 
 ---
