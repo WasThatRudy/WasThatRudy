@@ -10,7 +10,6 @@ I enjoy building clean, scalable user interfaces, working on real-world products
 - Frontend-focused developer working mainly with modern web technologies
 - Interested in UI architecture, state management, accessibility, and performance
 - Comfortable reading, understanding, and contributing to existing codebases
-- Currently preparing for **Google Summer of Code (GSoC)**
 
 ---
 
