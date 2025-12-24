@@ -12,24 +12,33 @@ I enjoy building clean, scalable user interfaces, working on real-world products
 - Comfortable reading, understanding, and contributing to existing codebases
 
 ---
+## 🛠 Tech Stack
 
-## 🛠 Skills & Technologies
+### Frontend
+<p align="left">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" width="40" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="40" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" width="40" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="40" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="40" />
+  <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" width="40" />
+</p>
 
-**Frontend**
-- React, Next.js
-- JavaScript, TypeScript
-- Tailwind CSS
-- Zustand / basic Redux
+### State Management
+<p align="left">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" width="40" />
+</p>
+<p>
+  <img src="https://avatars.githubusercontent.com/u/109655129?s=200&v=4" width="40" alt="Zustand" />
+</p>
 
-**Other**
-- Node.js
-- REST APIs
-- Git & GitHub
-- Linux / CLI
-
-**Foundations**
-- Data Structures & Algorithms  
-- DBMS, Operating Systems, Computer Networks
+### Backend & Tools
+<p align="left">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" width="40" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="40" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" width="40" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" width="40" />
+</p>
 
 ---
 
