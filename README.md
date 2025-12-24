@@ -62,4 +62,5 @@ I enjoy building clean, scalable user interfaces, working on real-world products
 
 ## 📊 GitHub Stats
 
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=WasThatRudy&show_icons=true&theme=default)
+![GitHub stats](https://stats.quine.sh/WasThatRudy/github?theme=light)
+
