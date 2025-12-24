@@ -33,20 +33,6 @@ I enjoy building clean, scalable user interfaces, working on real-world products
 
 ---
 
-## 💼 Experience
-
-**Frontend Developer — Remotestar**
-- Worked on production-grade React and Next.js applications
-- Improved component structure, UI logic, and state handling
-- Collaborated with backend engineers and designers in a team environment
-
-**Frontend Developer — PRED**
-- Worked on a trading platform frontend built with **React.js** and **Zustand**
-- Implemented and maintained state-heavy UI features such as order flows and market views
-- Focused on performance, predictable state management, and clean component architecture
-
----
-
 ## 📫 Contact
 
 - Email: rudraksharss@gmail.com  
