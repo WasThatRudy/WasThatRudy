@@ -1,0 +1,100 @@
+{
+  "fetched_at": "2026-11-10T14:38:36Z",
+  "followers": 7,
+  "public_repos": 54,
+  "merged_prs": 126,
+  "open_prs": 7,
+  "merged_prs_external": 94,
+  "external_repo_count": 15,
+  "stars_earned": 17,
+  "repos": [
+    {
+      "name": "Zenith",
+      "full_name": "pointblank-club/Zenith",
+      "description": "The day shall come, when the sun will rise on us again",
+      "language": "TypeScript",
+      "stars": 15,
+      "forks": 5,
+      "url": "https://github.com/pointblank-club/Zenith",
+      "merged_prs": 16
+    },
+    {
+      "name": "Kitten",
+      "full_name": "pointblank-club/Kitten",
+      "description": "",
+      "language": "Rust",
+      "stars": 2,
+      "forks": 1,
+      "url": "https://github.com/pointblank-club/Kitten",
+      "merged_prs": 6
+    },
+    {
+      "name": "headlamp-kmesh-plugin",
+      "full_name": "WasThatRudy/headlamp-kmesh-plugin",
+      "description": "Minimal Headlamp plugin surfacing Kmesh resources (KmeshNodeInfo, waypoints). Seed for LFX 2026-T2 mentorship: kmesh-net/kmesh#1658.",
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/WasThatRudy/headlamp-kmesh-plugin",
+      "merged_prs": 0
+    }
+  ],
+  "upstream": [
+    {
+      "repo": "kubernetes-sigs/headlamp",
+      "label": "Headlamp",
+      "org": "CNCF",
+      "merged": 14,
+      "open": 4
+    },
+    {
+      "repo": "Apicurio/apicurio-registry",
+      "label": "Apicurio Registry",
+      "org": "Red Hat",
+      "merged": 1,
+      "open": 0
+    },
+    {
+      "repo": "jaegertracing/jaeger-ui",
+      "label": "Jaeger UI",
+      "org": "CNCF",
+      "merged": 1,
+      "open": 0
+    },
+    {
+      "repo": "podman-container-tools/podman",
+      "label": "Podman",
+      "org": "Containers",
+      "merged": 1,
+      "open": 0
+    },
+    {
+      "repo": "flatcar/nebraska",
+      "label": "Nebraska",
+      "org": "Flatcar",
+      "merged": 0,
+      "open": 1
+    }
+  ],
+  "merged_by_repo": {
+    "ShinichiShi/SinkedIn": 30,
+    "pointblank-club/Zenith": 16,
+    "WasThatRudy/resume": 15,
+    "kubernetes-sigs/headlamp": 14,
+    "WasThatRudy/loan-wolf-user": 13,
+    "pointblank-club/PB_Website": 10,
+    "pointblank-club/iict-hack": 7,
+    "pointblank-club/Kitten": 6,
+    "pointblank-club/pbctf": 3,
+    "WasThatRudy/PBWebsite": 3,
+    "ShankhanilSaha/SPECTRA": 1,
+    "Samyak-SH/RetinaGradeAI": 1,
+    "WasThatRudy/segfault-2026": 1,
+    "Apicurio/apicurio-registry": 1,
+    "podman-container-tools/podman": 1,
+    "govindup63/Glim": 1,
+    "sxivansx/GitWall": 1,
+    "jaegertracing/jaeger-ui": 1,
+    "IamLRBA/LRBA-FusionCraft-STUDIOS-Architecture-Website": 1
+  }
+}

@@ -1,40 +1,21 @@
-# Hi 👋, I'm Rudraksha Singh Sengar
+<a href="https://www.rudraksha.tech"><img src="./cards/hero.svg" width="100%" alt="Rudraksha Singh Sengar - software engineer, Bangalore" /></a>
 
-I'm a software developer with a primary focus on frontend engineering.  
-I enjoy building clean, scalable user interfaces, working on real-world products, and learning through open-source collaboration.
+<img src="./cards/graph.svg" width="100%" alt="Contribution map, last 12 months" />
 
----
+<img src="./cards/activity.svg" width="100%" alt="Contributions per month, streaks and busiest day" />
 
-## 🛠 Tech Stack
+<a href="https://github.com/WasThatRudy?tab=repositories"><img src="./cards/tile-build.svg" width="32.5%" alt="Build - public repositories" /></a>
+<a href="https://github.com/pulls?q=is%3Apr+author%3AWasThatRudy+is%3Amerged"><img src="./cards/tile-open.svg" width="32.5%" alt="Open source - merged pull requests" /></a>
+<a href="https://www.rudraksha.tech/#bosses"><img src="./cards/tile-bosses.svg" width="32.5%" alt="Bosses - hackathons, CTFs, firsts" /></a>
 
-### Frontend
-![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=flat&logo=javascript&logoColor=F7DF1E)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-0F172A?style=flat&logo=tailwindcss&logoColor=38BDF8)
+<img src="./cards/upstream.svg" width="100%" alt="Merged pull requests in upstream projects" />
 
-### State Management
-![Zustand](https://img.shields.io/badge/Zustand-18181B?style=flat&logo=react&logoColor=white)
-![Redux](https://img.shields.io/badge/Redux-593D88?style=flat&logo=redux&logoColor=white)
-
-### Backend & Tools
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
+<a href="https://github.com/pointblank-club/Zenith"><img src="./cards/repo-1.svg" width="32.5%" alt="pointblank-club/Zenith" /></a>
+<a href="https://github.com/pointblank-club/Kitten"><img src="./cards/repo-2.svg" width="32.5%" alt="pointblank-club/Kitten" /></a>
+<a href="https://github.com/WasThatRudy/headlamp-kmesh-plugin"><img src="./cards/repo-3.svg" width="32.5%" alt="WasThatRudy/headlamp-kmesh-plugin" /></a>
 
 ---
 
+**[rudraksha.tech](https://www.rudraksha.tech)**  ·  [LinkedIn](https://linkedin.com/in/rudrakshasingh18)  ·  [rudraksharss@gmail.com](mailto:rudraksharss@gmail.com)
 
-## 📫 Contact
-
-- Email: rudraksharss@gmail.com  
-- LinkedIn: https://linkedin.com/in/rudrakshasingh18
-
----
-
-## 🪪 Open Source Participation
-
-[![Hacktoberfest Holopin badges](https://holopin.me/rudrakshass)](https://holopin.io/@rudrakshass)
-
+<sub>Every card above is an SVG drawn by <code>scripts/render_readme_cards.py</code> from my real contribution data, redrawn every morning by a GitHub Action. <a href="./CARDS.md">How it works →</a></sub>
