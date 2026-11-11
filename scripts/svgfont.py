@@ -1,4 +1,10 @@
-"""Font helpers: subset to a small charset, embed as base64 WOFF, measure text."""
+"""Font helpers: subset to the glyphs a card prints, embed as WOFF, measure text.
+
+Each face is declared under a short family name of our own. The name a font
+carries internally is irrelevant once @font-face names it explicitly, and short
+ASCII-only names avoid the CSS rule that a family whose last token starts with
+a digit has to be quoted wherever it is used.
+"""
 from __future__ import annotations
 
 import base64
@@ -13,13 +19,13 @@ ROOT = Path(__file__).resolve().parent.parent
 FONT_DIR = ROOT / "fonts"
 
 FONTS = {
-    "display": ("Jersey 25", "Jersey25-Regular.ttf"),
-    "pixel": ("Press Start 2P", "PressStart2P-Regular.ttf"),
-    "mono": ("VT323", "VT323-Regular.ttf"),
+    "display": ("ITightSemi", "InterTight-SemiBold.ttf"),
+    "sans": ("ITight", "InterTight-Regular.ttf"),
+    "mono": ("JBMono", "JetBrainsMono-Regular.ttf"),
+    "monomd": ("JBMonoMed", "JetBrainsMono-Medium.ttf"),
 }
 
-# Printable ASCII plus the handful of symbols the cards actually draw.
-CHARSET = "".join(chr(c) for c in range(0x20, 0x7F)) + "→←↑↓·•×★☆—–’‘“”…≈"
+CHARSET = "".join(chr(c) for c in range(0x20, 0x7F)) + "·—–’“”…→★"
 
 
 @lru_cache(maxsize=None)
@@ -34,14 +40,13 @@ def family(key: str) -> str:
 
 @lru_cache(maxsize=None)
 def _subset_woff(key: str, chars: str) -> str:
-    """Subset the font to `chars` and return it base64-encoded as WOFF."""
     font = TTFont(FONT_DIR / FONTS[key][1])
     options = subset.Options()
     options.flavor = "woff"
     options.notdef_outline = True
-    # Keep the defaults for everything else. Retaining layout features
-    # ("*") leaves Jersey 25 with GSUB/GDEF tables that point at dropped
-    # glyphs, and Chrome quietly refuses the whole face.
+    # Keep the subsetter defaults for everything else. Retaining layout
+    # features ("*") can leave GSUB/GDEF pointing at dropped glyphs, and a
+    # browser then refuses the whole face without reporting anything.
     subsetter = subset.Subsetter(options=options)
     subsetter.populate(text=chars)
     subsetter.subset(font)
@@ -55,37 +60,31 @@ def _subset_woff(key: str, chars: str) -> str:
 def face(key: str, chars: str = CHARSET) -> str:
     """An @font-face rule carrying only `chars`, inlined as a data URI.
 
-    Subsetting per card rather than per font is what keeps each SVG small:
-    a card that only prints uppercase and digits ships a ~15 KB face instead
-    of a ~50 KB one.
+    Subsetting per card rather than per font is what keeps each SVG small.
     """
-    name = family(key)
     chars = "".join(sorted(set(chars) | set(" ")))
     return (
-        "@font-face{font-family:'%s';font-style:normal;font-weight:400;"
-        "src:url(data:font/woff;base64,%s) format('woff')}" % (name, _subset_woff(key, chars))
+        "@font-face{font-family:%s;font-style:normal;font-weight:400;"
+        "src:url(data:font/woff;base64,%s) format('woff')}"
+        % (family(key), _subset_woff(key, chars))
     )
 
 
 @lru_cache(maxsize=None)
 def _metrics(key: str):
     font = _ttf(key)
-    upm = font["head"].unitsPerEm
-    cmap = font.getBestCmap()
-    hmtx = font["hmtx"]
-    return upm, cmap, hmtx
+    return font["head"].unitsPerEm, font.getBestCmap(), font["hmtx"]
 
 
-def width(key: str, text: str, size: float) -> float:
+def width(key: str, text: str, size: float, spacing: float = 0.0) -> float:
     """Advance width of `text` at `size` px, in px."""
     upm, cmap, hmtx = _metrics(key)
     total = 0
     for ch in text:
         name = cmap.get(ord(ch)) or cmap.get(ord("?"))
-        if name is None:
-            continue
-        total += hmtx[name][0]
-    return total * size / upm
+        if name is not None:
+            total += hmtx[name][0]
+    return total * size / upm + spacing * max(0, len(text) - 1)
 
 
 def fit(key: str, text: str, size: float, max_width: float, ellipsis: str = "…") -> str:

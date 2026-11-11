@@ -1,12 +1,12 @@
-<a href="https://www.rudraksha.tech"><img src="./cards/hero.svg" width="100%" alt="Rudraksha Singh Sengar - software engineer, Bangalore" /></a>
+<a href="https://www.rudraksha.tech"><img src="./cards/hero.svg" width="100%" alt="Rudraksha Singh Sengar - Software Engineer, Bangalore, India" /></a>
 
-<img src="./cards/graph.svg" width="100%" alt="Contribution map, last 12 months" />
+<img src="./cards/graph.svg" width="100%" alt="Contribution activity over the last twelve months" />
 
 <img src="./cards/activity.svg" width="100%" alt="Contributions per month, streaks and busiest day" />
 
-<a href="https://github.com/WasThatRudy?tab=repositories"><img src="./cards/tile-build.svg" width="32.5%" alt="Build - public repositories" /></a>
-<a href="https://github.com/pulls?q=is%3Apr+author%3AWasThatRudy+is%3Amerged"><img src="./cards/tile-open.svg" width="32.5%" alt="Open source - merged pull requests" /></a>
-<a href="https://www.rudraksha.tech/#bosses"><img src="./cards/tile-bosses.svg" width="32.5%" alt="Bosses - hackathons, CTFs, firsts" /></a>
+<a href="https://github.com/WasThatRudy?tab=repositories"><img src="./cards/tile-1.svg" width="32.5%" alt="Public repositories" /></a>
+<a href="https://github.com/pulls?q=is%3Apr+author%3AWasThatRudy+is%3Amerged"><img src="./cards/tile-2.svg" width="32.5%" alt="Merged pull requests" /></a>
+<a href="https://github.com/pulls?q=is%3Apr+author%3AWasThatRudy+is%3Amerged+-user%3AWasThatRudy"><img src="./cards/tile-3.svg" width="32.5%" alt="Upstream projects contributed to" /></a>
 
 <img src="./cards/upstream.svg" width="100%" alt="Merged pull requests in upstream projects" />
 
@@ -18,4 +18,4 @@
 
 **[rudraksha.tech](https://www.rudraksha.tech)**  ·  [LinkedIn](https://linkedin.com/in/rudrakshasingh18)  ·  [rudraksharss@gmail.com](mailto:rudraksharss@gmail.com)
 
-<sub>Every card above is an SVG drawn by <code>scripts/render_readme_cards.py</code> from my real contribution data, redrawn every morning by a GitHub Action. <a href="./CARDS.md">How it works →</a></sub>
+<sub>Every card above is an SVG drawn by <code>scripts/render_readme_cards.py</code> from my real contribution and pull-request data, redrawn each morning by a GitHub Action. <a href="./CARDS.md">How it works →</a></sub>
