@@ -12,15 +12,12 @@ GitHub strips scripts, styles and most attributes from README HTML. `<img>`,
 markdown and everything visual lives inside the images:
 
 ```html
-<a href="...">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./cards/tile-1.svg" />
-    <img src="./cards/light/tile-1.svg" width="32.5%" alt="Public repositories" />
-  </picture>
-</a>
+<a href="..."><picture><source media="(prefers-color-scheme: dark)" srcset="./cards/tile-1.svg"/><img src="./cards/light/tile-1.svg" width="32%" alt="Public repositories"/></picture></a>
 ```
 
-Three images at 32.5% sit in a row with a gap, and each one is its own link.
+Three images at 32% sit in a row with a gap, and each one is its own link.
+The markup has to stay on one line: a newline inside the `<picture>` becomes
+whitespace wide enough to wrap the third card onto its own row.
 An SVG shown through `<img>` is sandboxed: no scripts, no external requests.
 Its own CSS keyframes still run.
 
