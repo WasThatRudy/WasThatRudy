@@ -38,7 +38,9 @@ jobs:
         run: python scripts/fetch_github_data.py
 
       - name: Render README cards
-        run: python scripts/render_readme_cards.py
+        run: |
+          python scripts/render_readme_cards.py
+          THEME=light python scripts/render_readme_cards.py
 
       - name: Commit the cards
         run: |

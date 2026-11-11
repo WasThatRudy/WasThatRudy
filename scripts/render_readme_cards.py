@@ -31,19 +31,42 @@ W = 880    # the width GitHub renders README content at
 PAD = 36
 
 # ------------------------------------------------------------------ palette
-BG = "#0b0e13"
-PANEL = "#0f131a"
-LINE = "#1d232d"
-LINE_HI = "#2a323e"
-TEXT = "#e8ecf1"
-DIM = "#9aa5b3"
-MUTED = "#636d7c"
-FAINT = "#3c4450"
-ACCENT = "#5eead4"
-ACCENT_DIM = "#2f8d7c"
+# Two themes, selected per run. The README serves them with <picture>, so a
+# light-mode profile does not get dark blocks on a white page.
+
+THEME = os.environ.get("THEME", "dark")
+
+PALETTES = {
+    "dark": dict(
+        BG="#0b0e13", PANEL="#0f131a", LINE="#1d232d", LINE_HI="#2a323e",
+        TEXT="#e8ecf1", DIM="#9aa5b3", MUTED="#636d7c", FAINT="#3c4450",
+        ACCENT="#5eead4", ACCENT_DIM="#2f8d7c", BAR="#222a36", TRACK="#171d26",
+        LEVELS=["#161b23", "#113c38", "#176555", "#28a187", "#5eead4"],
+    ),
+    "light": dict(
+        BG="#ffffff", PANEL="#f8fafb", LINE="#dde3ea", LINE_HI="#c9d1da",
+        TEXT="#17202a", DIM="#4e5a68", MUTED="#7b8795", FAINT="#aeb7c2",
+        ACCENT="#0e8a76", ACCENT_DIM="#4cb8a4", BAR="#d7dee6", TRACK="#e8edf2",
+        LEVELS=["#ebeef2", "#c3e9df", "#7fcfbc", "#36a893", "#0e8a76"],
+    ),
+}
+
+_P = PALETTES[THEME]
+BG = _P["BG"]
+PANEL = _P["PANEL"]
+LINE = _P["LINE"]
+LINE_HI = _P["LINE_HI"]
+TEXT = _P["TEXT"]
+DIM = _P["DIM"]
+MUTED = _P["MUTED"]
+FAINT = _P["FAINT"]
+ACCENT = _P["ACCENT"]
+ACCENT_DIM = _P["ACCENT_DIM"]
+BAR = _P["BAR"]
+TRACK = _P["TRACK"]
 
 # Contribution levels: empty, then four steps toward the accent.
-LEVELS = ["#161b23", "#113c38", "#176555", "#28a187", "#5eead4"]
+LEVELS = _P["LEVELS"]
 
 LANG_COLOR = {
     "TypeScript": "#3178c6",
@@ -208,8 +231,9 @@ class Card:
         )
 
     def write(self, filename: str) -> None:
-        CARDS.mkdir(parents=True, exist_ok=True)
-        path = CARDS / filename
+        out = CARDS if THEME == "dark" else CARDS / THEME
+        out.mkdir(parents=True, exist_ok=True)
+        path = out / filename
         path.write_text(self.render())
         print(f"  {filename:<20} {path.stat().st_size / 1024:6.1f} KB")
 
@@ -402,7 +426,7 @@ def card_activity(s: dict) -> None:
         x = PAD + i * (bar_w + gap)
         bar_h = max(2, round(max_h * value / peak))
         best = key == s["best_month"]
-        c.rect(x, base_y - bar_h, bar_w, bar_h, ACCENT if best else "#222a36",
+        c.rect(x, base_y - bar_h, bar_w, bar_h, ACCENT if best else BAR,
                cls="growy" if not STATIC else "",
                style=delay(.3 + i * .045, "animation-duration:.6s") if not STATIC else "")
         if best:
@@ -486,7 +510,7 @@ def card_upstream(s: dict) -> None:
                cls="rise", style=delay(d + .03))
 
         bar_x, bar_w = 568, 136
-        c.rect(bar_x, y - 9, bar_w, 6, "#171d26", rx=3)
+        c.rect(bar_x, y - 9, bar_w, 6, TRACK, rx=3)
         if u["merged"]:
             c.rect(bar_x, y - 9, max(6, round(bar_w * u["merged"] / peak)), 6, ACCENT_DIM, rx=3,
                    cls="growx" if not STATIC else "", style=delay(d + .08) if not STATIC else "")
@@ -537,7 +561,7 @@ def card_repo(repo: dict, index: int) -> None:
 
 def main() -> None:
     s = load_stats()
-    print(f"rendering cards ({'static' if STATIC else 'animated'}) "
+    print(f"rendering {THEME} cards ({'static' if STATIC else 'animated'}) "
           f"from data fetched {s['cal']['fetched_at']}")
     card_hero(s)
     card_graph(s)
@@ -547,7 +571,8 @@ def main() -> None:
     card_upstream(s)
     for i, repo in enumerate(s["stats"]["repos"][:3]):
         card_repo(repo, i)
-    total = sum(p.stat().st_size for p in CARDS.glob("*.svg")) / 1024
+    out = CARDS if THEME == "dark" else CARDS / THEME
+    total = sum(p.stat().st_size for p in out.glob("*.svg")) / 1024
     print(f"  {'total':<20} {total:6.1f} KB")
 
 

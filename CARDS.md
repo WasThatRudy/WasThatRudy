@@ -12,14 +12,21 @@ GitHub strips scripts, styles and most attributes from README HTML. `<img>`,
 markdown and everything visual lives inside the images:
 
 ```html
-<a href="..."><img src="./cards/tile-1.svg" width="32.5%" /></a>
-<a href="..."><img src="./cards/tile-2.svg" width="32.5%" /></a>
-<a href="..."><img src="./cards/tile-3.svg" width="32.5%" /></a>
+<a href="...">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./cards/tile-1.svg" />
+    <img src="./cards/light/tile-1.svg" width="32.5%" alt="Public repositories" />
+  </picture>
+</a>
 ```
 
 Three images at 32.5% sit in a row with a gap, and each one is its own link.
 An SVG shown through `<img>` is sandboxed: no scripts, no external requests.
 Its own CSS keyframes still run.
+
+Every card is rendered twice, once per theme, and `<picture>` picks one — so a
+light-mode profile doesn't get dark blocks on a white page. `THEME=light`
+selects the palette; the light cards land in `cards/light/`.
 
 ## Fonts
 
@@ -71,5 +78,7 @@ mode that draws every card at its end state:
 pip install -r requirements.txt
 python scripts/fetch_github_data.py
 STATIC=1 python scripts/render_readme_cards.py
-python scripts/preview.py   # writes preview.html, open it or screenshot it
+STATIC=1 THEME=light python scripts/render_readme_cards.py
+python scripts/preview.py              # writes preview.html for the dark cards
+THEME=light python scripts/preview.py  # ... and for the light ones
 ```
