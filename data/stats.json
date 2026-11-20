@@ -1,10 +1,10 @@
 {
-  "fetched_at": "2026-11-10T14:38:36Z",
+  "fetched_at": "2026-11-20T08:38:28Z",
   "followers": 7,
   "public_repos": 54,
-  "merged_prs": 126,
-  "open_prs": 7,
-  "merged_prs_external": 94,
+  "merged_prs": 128,
+  "open_prs": 6,
+  "merged_prs_external": 96,
   "external_repo_count": 15,
   "stars_earned": 17,
   "repos": [
@@ -44,8 +44,8 @@
       "repo": "kubernetes-sigs/headlamp",
       "label": "Headlamp",
       "org": "CNCF",
-      "merged": 14,
-      "open": 4
+      "merged": 16,
+      "open": 3
     },
     {
       "repo": "Apicurio/apicurio-registry",
@@ -78,9 +78,9 @@
   ],
   "merged_by_repo": {
     "ShinichiShi/SinkedIn": 30,
+    "kubernetes-sigs/headlamp": 16,
     "pointblank-club/Zenith": 16,
     "WasThatRudy/resume": 15,
-    "kubernetes-sigs/headlamp": 14,
     "WasThatRudy/loan-wolf-user": 13,
     "pointblank-club/PB_Website": 10,
     "pointblank-club/iict-hack": 7,
