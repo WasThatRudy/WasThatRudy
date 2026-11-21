@@ -1,6 +1,6 @@
 {
   "user": "WasThatRudy",
-  "fetched_at": "2026-11-20T08:38:18Z",
+  "fetched_at": "2026-11-21T08:20:25Z",
   "total": 2466,
   "days": [
     {
@@ -1850,6 +1850,11 @@
     },
     {
       "date": "2026-11-20",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-11-21",
       "count": 0,
       "level": 0
     }
