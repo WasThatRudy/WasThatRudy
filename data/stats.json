@@ -1,19 +1,19 @@
 {
-  "fetched_at": "2026-11-26T09:38:09Z",
+  "fetched_at": "2026-11-27T09:43:28Z",
   "followers": 7,
   "public_repos": 54,
   "merged_prs": 129,
   "open_prs": 5,
   "merged_prs_external": 97,
   "external_repo_count": 15,
-  "stars_earned": 17,
+  "stars_earned": 16,
   "repos": [
     {
       "name": "Zenith",
       "full_name": "pointblank-club/Zenith",
       "description": "The day shall come, when the sun will rise on us again",
       "language": "TypeScript",
-      "stars": 15,
+      "stars": 14,
       "forks": 5,
       "url": "https://github.com/pointblank-club/Zenith",
       "merged_prs": 16
